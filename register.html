@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script type="text/javascript">
+        function check() {
+            if(document.getElementById("username").value === "") {
+                alert("没有输入用户名！");
+                return false;
+            } else if(document.getElementById("password").value === "") {
+                alert("没有输入密码！");
+                return false;
+            } else if(document.getElementById("repassword").value === "") {
+                alert("没有输入确认密码! ");
+                return false;
+            } else if(document.getElementById('password').value !== document.getElementById("repassword").value) {
+                alert("两次输入密码不同");
+                return false;    
+            } else {
+                alert("提交成功！");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="content">
+    <div class="login-header">
+        <span>Register</span>
+        <!-- <img src="images/login-img.png"> -->
+    </div>
+    <form action="register.php" method = "post">
+        <div class="login-input-box">
+            <span class="icon icon-user"></span>
+            <input type="text" name="username" id="username" placeholder="Please enter your username">
+        </div>
+        <div class="login-input-box">
+            <span class="icon icon-password"></span>
+            <input type="password" name="password" id="password" placeholder="Please enter your password" >
+        </div>
+        <div class="login-input-box">
+                <span class="icon icon-password"></span>
+                <input type="password" name="repassword" id="repassword" placeholder="Please enter your repassword" >
+        </div>
+        <div class="login-button-box">
+            <button type="submit" onclick="check()">Register</button>
+        </div>
+    </form>
+    <div class="register-box">
+        <a href="login.html">Back</a>
+    </div>
+</div>
+</body>
+</html>

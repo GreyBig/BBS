@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <!-- <script>
+            function checkinput()
+            {
+                var sUser = document.getElementsByName['username'].value;
+                var sPass = document.getElementsByName['password'].value;
+                console.log(sUser);
+                if($sUser = '')
+                {
+                    window.alert("用户名不能为空");
+                    return false;
+                }
+                if($sPass = '')
+                {
+                    window.alert("密码不能为空");
+                    return false;
+                }
+            }
+    </script> -->
+    <script type="text/javascript">
+        function check() {
+            if(document.getElementById("username").value === "") {
+                alert("没有输入用户名！");
+                return false;
+            } else if(document.getElementById("password").value === "") {
+                alert("没有输入密码！");
+                return false;
+            } else {
+                alert("提交成功！")
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div id="content">
+    <div class="login-header">
+        <span>Login</span>
+        <!-- <img src="images/login-img.png"> -->
+    </div>
+    <form action="login.php" method = "post">
+        <div class="login-input-box">
+            <span class="icon icon-user"></span>
+            <input type="text" name="username" id="username" placeholder="Please enter your username">
+        </div>
+        <div class="login-input-box">
+            <span class="icon icon-password"></span>
+            <input type="password" name="password" id="password" placeholder="Please enter your password" >
+        </div>
+        <div class="login-button-box">
+            <button type="submit" onclick="check()">Login</button>
+        </div>
+    </form>
+    <div class="remember-box">
+        <label>
+            <input type="checkbox">&nbsp;Remember Me
+        </label>
+    </div>
+
+    <div class="logon-box">
+        <a href="">Forgot?</a>
+        <a href="register.html">Register</a>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>BBS登录页面</title>
+        <link type="text/css" src="login.css" />
+    </head>
+    <body>
+        <div class="login_box">
+            <div class="login_l_image">
+                <img src="images/login-img.png"></img>
+            </div>
+            <div class="login">
+                <div class="login_logo">
+                    <img src=""></img>
+                </div>
+
+                <div class="login_name">
+                    <p>BBS系统登录</p>
+                </div>
+                <form action="loginphp" onsubmit="">
+                    <input type="text" name="username" id="username" value="">
+                    <input type="password" name="password" id="password">
+                    <input type="submit" value="登录" />
+                </form>
+            </div>
+            <div class="copyright">
+                <p>copyright@2019</p>
+            </div>
+        </div>
+
+        <script>
+            function checkinput()
+            {
+                var sUser = document.getElementsByName[''];
+                var sPass = document.getElementsByName[''];
+                if($sUser = '')
+                {
+                    window.alert("用户名不能为空");
+                    return false;
+                }
+                if($sPass = '')
+                {
+                    window.alert("密码不能为空");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html> -->
