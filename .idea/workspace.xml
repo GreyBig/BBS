@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5cbdb674-bdbc-4c2d-8629-008f4a0c63ad" name="Default Changelist" comment="" />
+    <list default="true" id="5cbdb674-bdbc-4c2d-8629-008f4a0c63ad" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bbs_detail_comment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bbs_detail_content.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bbs_new_detail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bbs_new_detail_process.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bbs_plate_list.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mysql/conn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/upload_process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_bbs_plate.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_bbs_plate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/add_bbs_plate_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/add_bbs_plate_process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,12 +37,27 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1P2be2QMXFxoYjv8CyabbngB2aC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\bbs\test" />
+      <recent name="D:\laragon\www\bbs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\bbs" />
+      <recent name="D:\laragon\www\bbs\test" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -42,11 +81,30 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565075230006</updated>
-      <workItem from="1565075231211" duration="6461000" />
+      <workItem from="1565075231211" duration="8751000" />
+      <workItem from="1565141748204" duration="22869000" />
+      <workItem from="1565228489320" duration="7383000" />
+      <workItem from="1565245171104" duration="10066000" />
+      <workItem from="1565255487495" duration="838000" />
+      <workItem from="1565264594539" duration="10902000" />
+      <workItem from="1565315048967" duration="723000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

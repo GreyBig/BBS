@@ -1,22 +1,14 @@
 <?php
+include('mysql/conn.php');
 // session判断
-header("content-type:text/html;charset=utf-8");
 session_start();
 if(!isset($_SESSION['username']) || $_SESSION['username'] == ""){
     echo 'No Session';
     header("refresh:3;url=login.html");
 }
-// query data
-$server = "localhost";
-$username = "root";
-$password = "root";
-$bbs_database = "bbs";
-$bbs_table = "tb_bbs_plate";
-$conn = mysqli_connect($server,$username,$password,$bbs_database);
-if(!$conn) {
-    die('Could not connect: ' . mysqli_error($conn));
-}
-mysqli_set_charset($conn, "utf8");
+
+$conn = new Conn();
+
 // COOKIE验证
 // if($_COOKIE["haha"] == ""){
 //     echo "<h1></h1>";
@@ -47,8 +39,11 @@ mysqli_set_charset($conn, "utf8");
     <body>
         <table border="1" cellspacing="0" cellpadding="8" align="center">
             <tr>
-                <td class="title" colspan="3">论坛列表
-                    <a style="margin-left: 100px; color: white; font-size:18px; text-decoration:none;" href="add_bbs_plate.php" >添加</a>
+                <td class="title" colspan="3">
+
+                    <a href="upload.php" ><img  style="width: 50px; height: 50px;" src="/images/logo.png"  alt="用户头像"></a>
+                        论坛列表
+                    <a style="margin-left: 100px; color: white; font-size:18px; text-decoration:none;" href="add_bbs_plate.html" >添加</a>
                 </td>
             </tr>
             <tr>
@@ -57,16 +52,15 @@ mysqli_set_charset($conn, "utf8");
                 <td width="15%">创建时间</td>
             </tr>
             <?php
-                $selectStr = "SELECT * FROM ".$bbs_table;
-                $ret = mysqli_query($conn, $selectStr);
+                $selectStr = "SELECT * FROM tb_bbs_plate";
+                $ret = mysqli_query($conn->connect(), $selectStr);
 
                 if(mysqli_num_rows($ret) > 0)
                 {
                     while($dataArray = mysqli_fetch_array($ret))
                     {
-
                         echo "<tr>";
-                        echo "<td>".$dataArray["subject"]."<br>"."<a href='\"http://www.baidu.com\"'>".$dataArray["name"]."</a>";
+                        echo "<td>".$dataArray["subject"]."<br>"."<a href=\"bbs_plate_list.php?plate_id=".$dataArray['id']."&page=0"."\">".$dataArray["name"]."</a>";
                         echo "<td>".$dataArray["description"]."</td>";
                         echo "<td>".$dataArray["time"]."</td>";
                         echo "</tr>";

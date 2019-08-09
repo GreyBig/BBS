@@ -44,7 +44,7 @@
     </style>
 </head>
 <body>
-    <form name="myform" method="post" onsubmit="return checkinput()">
+    <form action="add_bbs_plate_process.php" name="myform" method="post" onsubmit="return checkinput()">
         <table width="500px" border="1" cellpadding="8" cellspacing="0">
             <tr>
                 <td colspan="2" class="title">
@@ -67,7 +67,7 @@
             <tr height="100px">
                 <td width="30%">板块描述</td>
                 <td width="70%">
-                    <textarea  rows="10" cols="30" type="text" name="description" value="" ></textarea>
+                    <textarea  rows="10" cols="30" name="description"></textarea>
                 </td>
             </tr>
             <tr>
@@ -83,7 +83,7 @@
 <script type="text/javascript">
     function checkinput()
     {
-        if(myfor.name.value  == "")
+        if(myform.name.value  === "")
         {
             window.alert()("论坛名称不能为空")
         }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>BBS添加帖子</title>
+    <style type="text/css">
+        table{
+            width: 85%;
+            margin-top: 10px;
+        }
+        .title{
+            background-color: #0DA3FA;
+            font-size: 17px;
+            color: white;
+        }
+        table,td,tr{
+            border: 1px solid #0DA3FA;
+        }
+        .btn{
+            background-color: #0DA3FA;
+            width: 90px;
+            height: 40px;
+            font-size: 15px;
+            color: white;
+            border: none;
+        }
+        #title{
+            color: White;
+        }
+        .input{
+            border: 1px solid #0DA3FA;
+            width: 200px;
+            height: 20px;
+        }
+        a{
+            color: White;
+        }
+        .right{
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<form action="bbs_new_detail_process.php?plate_id=<?php echo $_GET['plate_id'] ?>" name="myform" method="post" onsubmit="return checkinput()">
+    <table width="500px" border="1" cellpadding="8" cellspacing="0">
+        <tr>
+            <td colspan="2" class="title">
+                添加帖子
+                <a style="margin-left: 100px" href="index.php">[返回]</a>
+            </td>
+        </tr>
+        <tr>
+            <td width="30%">帖子名称</td>
+            <td width="70%">
+                <input class="input" type="text" name="title" value="">
+            </td>
+        </tr>
+        <tr height="100px">
+            <td width="30%">帖子内容</td>
+            <td width="70%">
+                <textarea  rows="10" cols="30" name="content"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td width="30%"></td>
+            <td width="70%">
+                <input class="btn" type="submit" value="添加" >
+                <input class="btn" type="reset" value="重置" >
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+<script type="text/javascript">
+    function checkinput()
+    {
+        if(myform.name.value  === "")
+        {
+            window.alert()("论坛名称不能为空")
+        }
+    }
+</script>
+</html>

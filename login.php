@@ -1,9 +1,7 @@
 <?php
-header("content-tye:text/html;charset=utf-8");
-
+include('mysql/conn.php');
 // 利用session保存
 session_start();
-
 $_SESSION['username'] = $_POST['username'];
 $_SESSION['password'] = $_POST['password'];
 
@@ -14,23 +12,11 @@ if($_POST['username'] == '' || $_POST['password'] == ''){
 
 $name = $_POST['username'];
 $pwd = $_POST['password'];
-
-$server = "localhost";
-$username = "root";
-$password = "root";
-$bbs_database = "bbs";
-$bbs_table = "tb_user";
-
-$conn = mysqli_connect($server,$username,$password,$bbs_database);
-if(!$conn) {
-    die('Could not connect: ' . mysqli_error($conn));
-} else {
-    echo 'Success';
-}
-
 $pwd = md5($pwd);
+
+$conn = new Conn();
 // 验证用户名密码是否正确
-$sql = $conn->query("select * from tb_user where username ='{$name}' and password = '{$pwd}' ");
+$sql = mysqli_query($conn->connect(),"select * from tb_user where username ='{$name}' and password = '{$pwd}' ");
 
 //查询数据库中的用户名和密码 并返回集合
 $row = mysqli_fetch_assoc($sql); //取其中一行
