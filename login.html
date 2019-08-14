@@ -4,36 +4,19 @@
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="login.css">
-    <!-- <script>
-            function checkinput()
-            {
-                var sUser = document.getElementsByName['username'].value;
-                var sPass = document.getElementsByName['password'].value;
-                console.log(sUser);
-                if($sUser = '')
-                {
-                    window.alert("用户名不能为空");
-                    return false;
-                }
-                if($sPass = '')
-                {
-                    window.alert("密码不能为空");
-                    return false;
-                }
-            }
-    </script> -->
     <script type="text/javascript">
         function check() {
             if(document.getElementById("username").value === "") {
                 alert("没有输入用户名！");
-                location.href="login.html";
+                window.location.href="login.html";
                 return false;
             } else if(document.getElementById("password").value === "") {
                 alert("没有输入密码！");
-                location.href="login.html";
+                window.location.href="login.html";
                 return false;
             }
         }
+
     </script>
 </head>
 <body>
