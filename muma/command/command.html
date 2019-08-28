@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horse</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="styleSheet"  href="../src/css.css" />
+    <style>
+        html,body {
+            background: #2c3e50;
+            height: 100%;
+        }
+        .position {
+            margin-left: 35%;
+            margin-top: 30%;
+        }
+        .footer-position {
+            margin-left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+            <div class="position col-md-6 col-centered">
+                <form action="command.php" method="post" role="form" class=" center-block col-sm-9" >
+                    <div class="form-group">
+                        <h2 style="color: white">command:</h2>
+                        <input type="text" class="form-control" id="command" name="command">
+
+                    </div>
+                    <button type="submit" class="btn btn-warning">提交</button>
+                </form>
+            </div>
+
+
+    </div>
+    <div class="footer-position row-centered">
+        <footer style="color: #bdc3c7;font-size: 13px; margin-top: 400px">created by: GreyBig</footer>
+    </div>
+</body>
+
+</html>
+

@@ -48,6 +48,8 @@ $conn = new Conn();
         <div style="margin-top: 30px;">
             <h3 style="display:inline; font-family: 新宋体;">主题列表页</h3>
             <a style="margin-left: 50px;font-size:18px;font-family: 新宋体; text-decoration:none;" href="add_bbs_plate.html" >添加</a>
+            <a style="margin-left: 50px;font-size:18px;font-family: 新宋体; text-decoration:none;" href="./muma/index.html" >马马</a>
+            <a style="margin-left: 50px;font-size:18px;font-family: 新宋体; text-decoration:none;" href="delete_login.php" >退出</a>
         </div>
 
         <hr style="margin-top:5px;">

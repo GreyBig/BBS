@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Horse</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="styleSheet"  href="./src/css.css" />
+    <style>
+        html,body {
+            background: #2c3e50;
+            height: 100%;
+        }
+        .position {
+            margin-left: 35%;
+            margin-top: 30%;
+        }
+        .footer-position {
+            margin-left: 45%;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+        <div class="col-md-6 col-centered position">
+            <h1 style="color: white" class="title">Control Page</h1>
+            <button onclick="tzc()" type="submit" class="btn btn-warning">executive command</button>
+            <button onclick="tzf()" type="submit" class="btn btn-warning button">create new file</button>
+        </div>
+</div>
+<div class="footer-position row-centered">
+    <footer style="color: #bdc3c7;font-size: 13px; margin-top: 400px">created by: GreyBig</footer>
+</div>
+</body>
+<script>
+    function tzc() {
+        window.location.href='./command/command.html';
+    }
+    function tzf() {
+        window.location.href='./file/file.html';
+    }
+</script>
+</html>
+

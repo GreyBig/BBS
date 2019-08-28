@@ -10,13 +10,21 @@ if($_POST['username'] == '' || $_POST['password'] == ''){
     return false;
 }
 
-$name = $_POST['username'];
-$pwd = $_POST['password'];
-$pwd = md5($pwd);
+$user = replace_specialChar($_POST[ 'username' ]);
+// $user = stripslashes( $user );
+
+// Sanitise password input
+$pass = replace_specialChar($_POST[ 'password' ]);
+$pass = md5( $pass );
+
+if ($user== false || $pass == false) { //判断是否存在
+    echo "密码错误";
+    header("location:login.html");
+}
 
 $conn = new Conn();
 // 验证用户名密码是否正确
-$sql = mysqli_query($conn->connect(),"select * from tb_user where username ='{$name}' and password = '{$pwd}' ");
+$sql = mysqli_query($conn->connect(),"select * from tb_user where username ='{$user}' and password = '{$pass}' ");
 
 //查询数据库中的用户名和密码 并返回集合
 $row = mysqli_fetch_assoc($sql); //取其中一行
@@ -33,3 +41,8 @@ if ($row > 0) { //判断是否存在
     header("location:register.html"); //跳转至注册页面
 }
 
+
+function replace_specialChar($strParam){
+    $regex = "/\/|\～|\，|\。|\！|\？|\“|\”|\【|\】|\『|\』|\：|\；|\《|\》|\’|\‘|\ |\·|\~|\!|\@|\#|\\$|\%|\^|\&|\*|\(|\)|\_|\+|\{|\}|\:|\<|\>|\?|\[|\]|\,|\.|\/|\;|\'|\`|\-|\=|\\\|\|/";
+    return preg_replace($regex,"",$strParam);
+}

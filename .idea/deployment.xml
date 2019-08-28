@@ -5,7 +5,7 @@
       <paths name="BBS">
         <serverdata>
           <mappings>
-            <mapping deploy="/www/wwwroot/venus.cn" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/www/wwwroot/venus22.cn" local="$PROJECT_DIR$" web="/" />
             <mapping deploy="" local="" web="" />
           </mappings>
         </serverdata>
